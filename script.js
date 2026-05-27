@@ -5,6 +5,9 @@ let p;
 function onload() {
   body = document.body;
   p = document.getElementById('theText');
+  window.addEventListener('resize', fitText);
+  document.addEventListener('click', newText);
+  document.addEventListener('keydown', newText);
   newText();
 }
 function fitText() {
@@ -30,6 +33,3 @@ function newText() {
   }
   fitText();
 }
-window.addEventListener('resize', fitText);
-document.addEventListener('click', newText);
-document.addEventListener('keydown', newText);
