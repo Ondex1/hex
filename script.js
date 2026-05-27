@@ -12,8 +12,10 @@ function onload() {
 }
 function fitText() {
   p.style.fontSize = '1000px';
-  const scale = body.clientWidth / p.scrollWidth;
-  p.style.fontSize = `min(${1000 * scale}px, 100dvh)`;
+  const scale = document.documentElement.clientWidth / p.scrollWidth;
+  p.style.fontSize = 1000 * scale + 'px';
+  const finalScale = document.documentElement.clientWidth / p.scrollWidth;
+  p.style.fontSize = 1000 * scale * finalScale + 'px';
 }
 const random1to16 = () => Math.floor(Math.random()*16)
 const hexToString = (x) => x.toString(16).toUpperCase()
