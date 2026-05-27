@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Hex Addition</title>
+    <script>
+let anwserShown = true;
+let anwser;
+let body;
+let p;
+function onload() {
+  body = document.body;
+  p = document.getElementById('theText');
+  newText();
+}
+function fitText() {
+  p.style.fontSize = '1000px';
+  const scale = body.clientWidth / p.scrollWidth;
+  p.style.fontSize = `min(${1000 * scale}px, 100dvh)`;
+}
+const random1to16 = () => Math.floor(Math.random()*16)
+const hexToString = (x) => x.toString(16).toUpperCase()
+function newText() {
+  if (anwserShown) {
+    anwserShown = false;
+    const a = random1to16();
+    const b = random1to16();
+    const sum = a+b;
+    const aString = hexToString(a);
+    const bString = hexToString(b);
+    anwser = hexToString(sum);
+    p.innerText = `${aString}+${bString}`;
+    fitText();
+  } else {
+    anwserShown = true;
+    p.innerText = anwser;
+  }
+}
+window.addEventListener('resize', fitText);
+document.addEventListener('click', newText);
+document.addEventListener('keydown', newText);
+</script>
+  </head>
+  <body onload="onload()" style="margin: 0; height: 100dvh; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+    <p id="theText" style="font-family: sans-serif; user-select: none; caret-color: transparent; margin: 0; line-height: 1;"></p>
+  </body>
+</html>
