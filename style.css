@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+body p {
+    font-family:
+    sans-serif;
+    user-select:
+    none; caret-color:
+    transparent; margin: 0;
+    line-height: 1;
+}

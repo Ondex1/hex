@@ -1,10 +1,3 @@
-<!DOCTYPE html>
-<html lang="zxx">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Hex Addition</title>
-    <script>
 let anwserShown = true;
 let anwser;
 let body;
@@ -31,18 +24,12 @@ function newText() {
     const bString = hexToString(b);
     anwser = hexToString(sum);
     p.innerText = `${aString}+${bString}`;
-    fitText();
   } else {
     anwserShown = true;
     p.innerText = anwser;
   }
+  fitText();
 }
 window.addEventListener('resize', fitText);
 document.addEventListener('click', newText);
 document.addEventListener('keydown', newText);
-</script>
-  </head>
-  <body onload="onload()" style="margin: 0; height: 100dvh; display: flex; align-items: center; justify-content: center; overflow: hidden;">
-    <p id="theText" style="font-family: sans-serif; user-select: none; caret-color: transparent; margin: 0; line-height: 1;"></p>
-  </body>
-</html>
