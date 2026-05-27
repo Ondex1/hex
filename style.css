@@ -1,3 +1,6 @@
+html {
+    overflow: hidden;
+}
 body {
     margin: 0;
     height: 100dvh;
@@ -7,10 +10,9 @@ body {
     overflow: hidden;
 }
 body p {
-    font-family:
-    sans-serif;
-    user-select:
-    none; caret-color:
-    transparent; margin: 0;
+    font-family: sans-serif;
+    user-select: none;
+    caret-color: transparent;
+    margin: 0;
     line-height: 1;
 }
